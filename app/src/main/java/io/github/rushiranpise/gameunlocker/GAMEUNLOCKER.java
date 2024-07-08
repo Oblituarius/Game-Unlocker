@@ -111,8 +111,8 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
 
         // Asus
         if (Arrays.asList(packagesToChangeROG6).contains(packageName)) {
-            propsToChangeROG6();
-            XposedBridge.log("Spoofed " + packageName + " as Asus ROG 6");
+            propsToChangeROG7();
+            XposedBridge.log("Spoofed " + packageName + " as Asus ROG 7");
         }
 
         // Black Shark
@@ -134,8 +134,8 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
         }
 
         if (Arrays.asList(packagesToChangeOP9P).contains(packageName)) {
-            propsToChangeOP9P();
-            XposedBridge.log("Spoofed " + packageName + " as OnePlus 9 Pro");
+            propsToChangeOP11P();
+            XposedBridge.log("Spoofed " + packageName + " as OnePlus 11");
         }
 
         // Poco
@@ -163,12 +163,12 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
     }
 
     // Asus
-    // Props to Spoof as Asus Rog 6
-    private static void propsToChangeROG6() {
+    // Props to Spoof as Asus Rog 7
+    private static void propsToChangeROG7() {
         setPropValue("BRAND", "asus");
         setPropValue("MANUFACTURER", "asus");
-        setPropValue("DEVICE", "AI2201");
-        setPropValue("MODEL", "ASUS_AI2201");
+        setPropValue("DEVICE", "AI2205_C");
+        setPropValue("MODEL", "ASUS_AI2205_C");
     }
 
     // Blackshark
@@ -192,10 +192,10 @@ public class GAMEUNLOCKER implements IXposedHookLoadPackage {
         setPropValue("MODEL", "IN2020");
     }
 
-    // Props to Spoof as OnePlus 9 Pro
-    private static void propsToChangeOP9P() {
+    // Props to Spoof as OnePlus 11
+    private static void propsToChangeOP11P() {
         setPropValue("MANUFACTURER", "OnePlus");
-        setPropValue("MODEL", "LE2123");
+        setPropValue("MODEL", "CPH2451");
     }
 
     //Poco
